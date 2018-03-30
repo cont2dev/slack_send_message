@@ -6,15 +6,23 @@
 * python3
 * python3-venv
 
+
 1. Install the requirements
 ```bash
 sudo apt install git python3 python3-venv
 ```
 
-2. Get your tokken
+2. Get the source and activate venv
+```bash
+git clone https://github.com/cont2dev/slack_send_message
+cd slack_send_message
+source env/bin/activate
+```
+
+3. Get your tokken
 https://api.slack.com/custom-integrations/legacy-tokens
 
-3. Add your token to the "token" in send_message.py
+4. Add your token to the "token" in send_message.py
 ```python
 from slacker import Slacker
 
@@ -25,7 +33,7 @@ slack = Slacker(token)
 ...
 ```
 
-4. Run
+5. Run
 ```bash
 python3 send_message.py
 ```
